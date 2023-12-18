@@ -22,7 +22,20 @@ const getOne = async (id) => {
         }
 }
 
+const deleteByID = async (id) => {
+    try {
+        // const [data] = await dbConn.dbConnectionPool.query('DELETE FROM product WHERE product_id = ?;', id);
+        await dbConn.dbConnectionPool.query('DELETE FROM product WHERE product_id = ?;', id);
+        // return data;
+    } catch (error) {
+        console.log('Error de BD' + error);
+    } finally {
+        dbConn.dbConnectionPool.releaseConnection();
+    }
+}
+
 module.exports = {
     getAll,
-    getOne
+    getOne,
+    deleteByID
 }

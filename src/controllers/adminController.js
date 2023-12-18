@@ -12,7 +12,11 @@ const adminControllers = {
         res.render('admin/edit',{data});
     },
     admin_edit_put : (req, res) => res.send("Ruta para Edit x put"),
-    admin_delete : (req, res) => res.send(`Se *borró* el item con id ${req.params.id}`)
+    admin_delete : async (req, res) => {
+        await productModel.deleteByID(req.params.id);
+        res.redirect('/admin');
+        // res.send(`Se *borró* el item con id ${req.params.id}`);
+    }
 }
 
 module.exports = adminControllers;

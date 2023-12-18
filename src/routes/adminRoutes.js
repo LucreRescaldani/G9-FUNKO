@@ -1,5 +1,6 @@
 const express = require('express');
 const adminControllers = require('../controllers/adminController');
+const methodOverride = require('method-override');
 
 const router = express.Router();
 
@@ -10,6 +11,8 @@ const requiereAdmin = (req, res, next) => {
     }
     next();
 }
+
+router.use(methodOverride('_method'));
 
 router.get('/', requiereAdmin, adminControllers.admin_get);
 router.get('/create', requiereAdmin, adminControllers.admin_create_get);
