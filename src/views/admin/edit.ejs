@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/create_Edit_contact.css">
+    <link rel="stylesheet" href="../../css/Normalizacioncss.css">
+
+    <title>Editar item | Funkoshop</title>
+</head>
+
+<body>
+  <!--  ************* HEADER ****************  -->
+
+  <%- include("../partials/header_admin") %>
+
+  <!--  ************** MAIN *****************  -->
+
+    <main class="container container-b"> 
+        <form action="#" method="post">
+            <h1 class="main-article">EDITAR ITEM</h1>
+            <article class="main-article">
+                <label for="categoria">Categoría:</label>
+                <select class="create-input edit-input" id="categoria" name="categoria">
+                    <option value="opcion1">Figuras</option>
+                    <option value="opcion2">Remeras</option>
+                    <option value="opcion3">Llaveros</option>
+                </select>
+            
+                <label for="licencia">Licencia:</label>
+                <select class="create-input edit-input" id="licencia" name="licencia" img src="/img/material-symbols_arrow-drop-down-rounded.svg" alt="">
+                    <option value="opcion1">Naruto Shippuden</option>
+                    <option value="opcion2">Opción 2</option>
+                    <option value="opcion3">Opción 3</option>
+                </select>
+            </article>
+
+            <article class="main-article">
+                <label class="form-label" for="nombre">Nombre del Producto:</label>
+                <input class="create-input edit-input" type="text" id="nombre" name="nombre" value="<%=data.product_name%>">
+            </article>
+            
+            <textarea class="create-input edit-input" id="descripcion" name="descripcion"><%=data.product_description%></textarea>
+            
+            <article class="main-article">
+                <label for="sku">SKU:</label>
+                <input class="edit-input" type="text" id="sku" name="sku" value="<%=data.sku%>">
+            
+                <label for="precio">Precio:</label>
+                <input class="edit-input" type="text" id="precio" name="precio" value="$ <%=data.price%>">
+                
+                <label for="stock">Stock:</label>
+                <input class="edit-input" min="0" type="number" id="stock" name="stock" value="<%=data.stock%>">
+            </article>
+            
+            <article class="main-article">
+                <label for="descuento">Descuento:</label>
+                <input class="edit-input" type="text" id="descuento" name="descuento" value="<%=data.discount%>%">
+                
+                <label for="cuotas">Cuotas:</label>
+                <select class="create-input edit-input" id="cuotas" name="cuotas">
+                    <option value="opcion1">6 cuotas sin interés</option>
+                    <option value="opcion2">3 cuotas sin interés</option>
+                    <option value="opcion3">Opción 2</option>
+                    <option value="opcion4">Opción 3</option>
+                </select>
+            </article>
+            
+            <article class="main-article">
+                <label class="form-label">Imágenes:</label>
+                <input type="file" id="imagenes" name="imagenes" multiple>
+             </article>
+            <br>
+            <br>
+            <br>
+             <div>
+                <article>
+                    <picture class="img_frente_edit">
+                        <img class="img_edit" src="../../img/Group 109.svg" alt="Imagen frente caja figura Kakashi">
+                    </picture>
+                    <picture >
+                        <img class="img_edit" src="../../img/Group 110.svg" alt="Imagen dorso caja figura Kakashi">
+                    </picture>
+                </article>
+            </div>
+
+            <article class="main-article">
+                <button class="edit-modificar" type="submit">Modificar Producto</button>
+            </article>
+        </form>
+    
+    
+    </main>
+
+    <!--  ************* FOOTER ****************  -->
+
+    <%- include("../partials/footer") %>
+
+    <!--  ************* SCRIPTS ****************  -->
+</body>
+</html>

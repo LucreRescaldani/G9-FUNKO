@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/Normalizacioncss.css">
+    <title>Login | Funkoshop</title>
+</head>
+
+<body>
+  <!--  ************* HEADER ****************  -->
+
+  <%- include("../partials/header_admin") %>
+
+  <!--  ************** MAIN *****************  -->
+
+    
+    <main class="main container">
+        <section class="main-section">
+            <h1 class="main-title">INGRESAR A MI CUENTA</h1>
+            <!-- <form action="procesar_login" method="post"> -->
+            <form action="/auth/login" method="post">
+                <article class="main-article">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="johndoe@correo.com">
+                </article>
+                    
+                <article class="main-article">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required placeholder="•••••••••">
+                </article>
+                
+                <article class="main-article">
+                    <input class="main-btn" type="submit" value="Ingresar">
+                    <input type="checkbox" id="remember" name="remember">
+                    <p>Recordarme</p>
+                </article>
+            </form>
+        <a class="main-link" href="#">Olvidé mi contraseña</a>
+        </section>
+        
+    </main>
+    <!--  ************* FOOTER ****************  -->
+
+    <%- include("../partials/footer") %>
+
+    <!--  ************* SCRIPTS ****************  -->
+</body>
+</html>

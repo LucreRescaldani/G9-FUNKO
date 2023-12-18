@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+
+    <!-- script para insertar iconos -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    
+    <!-- Estilos -->
+    
+    <link rel="stylesheet" href="../../css/cart.css">
+    <link rel="stylesheet" href="../../css/item_shop.css">
+    <link rel="stylesheet" href="../../css/Normalizacioncss.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+
+</head>
+
+<body>
+  <!--  ************* HEADER ****************  -->
+
+  <%- include("../partials/header_shop") %>
+
+  <!--  ************** MAIN *****************  -->
+
+     <!--<main class="main-container"> --Inicio main
+        <section class="item-collection container">
+            <picture class="collection-cover card-item-cover">
+                <img class="card-item-img--front" src="../../img/star-wars/baby-yoda-1.webp" alt="Figura Funko coleccionable de Grogu perteneciente a la serie The Mandalorian">
+                <img class="card-item-img--back" src="../../img/star-wars/baby-yoda-box.webp" alt="Figura Funko coleccionable de Grogu perteneciente a la serie The Mandalorian en caja">
+            </picture>
+            <article class="item-collection-content">
+                <p class="item-collection-licence">STAR WARS</p>
+                <h3 class="item-collection-title">BABY YODA BLUEBALL</h3>
+                <p class="item-collection-text">Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.</p>
+                <p class="item-collection-price">$ 1799,99</p>
+                <div class="card-item-promo">
+                    <input id="quantity" class="item-input" type="text" name="quantity"  placeholder="0">
+                    <div class="item-btns">
+                        <button id="subtract" class="item-cantidad" type="button">-</button>
+                        <button id="add" class="item-cantidad" type="button">+</button>
+                    </div>
+                    <button class="item-btn-carrito" type="submit">Agregar al carrito</button>
+                </div>
+                <a class="item-collection-link" href="../shop/cart.html"><u>Ver métodos de pago</u> - 3 CUOTAS SIN INTERÉS</a> 
+            </article>
+        </section> 
+        -->
+    <main class="container-cart">
+        <section>
+            <h1 class="titulo-carrito">CARRITO DE COMPRAS</h1>
+         <section>
+            <table class="cart-container">
+                <thead class="cart-head">
+                    <tr>
+                        <th class="item-cart-head1">DETALLE DEL PRODUCTO</th>
+                        <th class="item-cart-head2">CANTIDAD</th>
+                        <th class="item-cart-head3">TOTAL</th>
+                    </tr>
+                </thead>
+        </section>
+                <tbody>
+                    <tr class="cart-head">
+                        <td>
+                            <picture>
+                                <img class="logo-prod" src="../../img/star-wars/baby-yoda-1.webp"
+                                    alt="Figura Funko coleccionable de Grogu perteneciente a la serie The Mandalorian">
+                            </picture>
+                        </td>
+                        <td class="text-cart">
+                            <h1>BABY YODA BLUEBALL</h1>
+                            <p>STAR WARS</p>
+                            <p>precio $ 1.799,99.-</p>
+                        </td>
+                        <td>
+                            <div class="cart-cantidad">
+                                <p class="cart-input">2</p>
+                                <div class="cart-btns">
+                                    <button id="subtract" class="cart-mm" type="button">-</button>
+                                    <button id="add" class="cart-mm" type="button">+</button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price-cart">
+                            <!-- calcular el precio de el/los productos a comprar-->
+                            <p>$ 3.599,98</p> 
+                        </td>
+                        <td>
+                            <a href="">
+                                <img class="eliminar-cart" src="../../img/icons/cross-circled.svg" alt="icono de circulo tachado">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="cart-head">
+                        <td>
+                            <picture>
+                                <img class="logo-prod" src="../../img/pokemon/pidgeotto-1.webp"
+                                    alt="Figura Funko coleccionable de un Pidgeotto">
+                            </picture>
+                        </td>
+                        <td class="text-cart">
+                            <h1>PIDGEOTTO</h1>
+                            <p>POKEMON</p>
+                            <p>precio $ 1.799,99.-</p>
+                        </td>
+                        <td>
+                            <div class="cart-cantidad2">
+                                <p class="cart-input">1</p>
+                                <div class="cart-btns">
+                                    <button id="subtract" class="cart-mm" type="button">-</button>
+                                    <button id="add" class="cart-mm" type="button">+</button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price-cart">
+                            <p>$ 1.799,99</p> 
+                        </td>
+                        <td>
+                            <a href="">
+                                <img class="eliminar-cart" src="../../img/icons/cross-circled.svg" alt="icono de circulo tachado">
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="resumen-cart">
+            <div>
+                <h1 class="titulo-resumen">RESUMEN</h1>
+            </div>
+            <article>
+                <table class="cart-articulos">
+                    <tr class="fila-articulos">
+                        <td>
+                            <p>CANTIDAD DE ELEMENTOS</p>
+                        </td>
+                        <td>
+                            <p> 3 </p>
+                        </td>
+                    </tr>
+                    <tr class="fila-articulos">
+                        <td>
+                            <p>SUBTOTAL</p>
+                        </td>
+                        <td>
+                            <p>$ 5.399,97</p>
+                        </td>
+                    </tr>
+                    <tr class="fila-articulos">
+                        <td>
+                            <p>ENVIO</p>
+                        </td>
+                        <td>
+                            <p> $ 0,00 </p>
+                        </td>
+                    </tr>
+                    <!-- colocar linea divisoria de color rojo-->
+                    <tr class="fila-articulos total-cart">
+                        <td>
+                            <p>TOTAL</p>
+                        </td>
+                        <td>
+                            <p>$ 5.399,97</p>
+                        </td>
+                    </tr>
+                </table>
+            </article>
+            <div>
+                    <button class="btn-pagar" type="submit">IR A PAGAR</button>
+            </div>
+        </section>
+    </main>
+
+    <!--  ************* FOOTER ****************  -->
+
+    <%- include("../partials/footer") %>
+
+    <!--  ************* SCRIPTS ****************  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="../../js/btns-item.js"></script>
+    <script src="../../js/glide.js"></script>
+</body>
+
+</html>

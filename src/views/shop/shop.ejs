@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Funkoshop</title>
+    <link rel="stylesheet" href="/css/item_shop.css">
+    <link rel="stylesheet" href="/css/Normalizacioncss.css">
+</head>
+
+<body>
+  <!--  ************* HEADER ****************  -->
+  <%- include("../partials/header_shop") %>
+
+  <!--  ************** MAIN *****************  -->
+  <main class="container">
+    <!--Filtros-->
+    <section>
+
+        <section class="filtro">
+        <p>BUSCAR</p>
+        <div class="op-filtro">
+        <input class="orden-tamaño filtro" type="text" placeholder="Item o categoria" />
+        </div>
+        </section>
+
+        <section class="filtro">
+        <p>ORDENAR POR</p>
+        <div class="op-filtro">
+        <form action="#">
+          <select class="orden-tamaño filtro">
+            <option value="">Mayor a menor</option>
+            <option value="">Menor a mayor</option>
+            <option value="">Más vendidos</option>
+            <option value="">Más recientes</option>
+          </select>
+        </form>
+        </div>
+        </section>
+
+        <section class="filtro">
+        <p>PRECIO</p>
+        <div class="min-max op-filtro"> <!--No funcionan class-->
+          <label>MIN</label> <!--Falta poner uno al lado del otro. Cambiar tamaño letra-->
+          <input class="mm-btn" type="number" min="0" value="0" name="minimo"/>
+          <p>-</p>
+          <label>MAX</label>
+          <input class="mm-btn" type="number" min="0" value="0" name="maximo"/>
+        </div>
+        </section>
+
+        <section class="filtro">
+        <p>FILTRAR</p>
+        <div class="op-filtro">
+        <ul class="check">
+          <li>
+            <label > <input class="input-check" type="checkbox" /> NUEVOS</label>
+          </li>
+          <li>
+            <label> <input class="input-check" type="checkbox" /> OFERTAS</label>
+          </li>
+          <li>
+              <label> <input class="input-check" type="checkbox" /> EDICIÓN ESPECIAL</label>
+            </li>
+            <li>
+                <label> <input class="input-check" type="checkbox" /> FAVORITOS</label>
+            </li>
+        </ul>
+        </div>
+        </section>
+    </section>
+    
+    <!--Lista de productos del shop-->
+    <div class="grid-layout"> <!--Acomodar imagenes mismo tamaño-->
+
+    <!-- Vitrina de productos -->
+    <% data.forEach( elemento => { %>
+        <div class="card-item card">
+          <a class="card-item-link" href="/shop/item/<%= elemento.product_id %>">
+            <picture class="card-item-cover">
+              <span class="card-item-tag">Nuevo</span>
+              <img class="card-item-img--front" src="/img<%= elemento.image_front %>" alt="Figura Funko coleccionable de Pidgeotto perteneciente a la serie Pokemon">
+              <img class="card-item-img--back" src="/img<%= elemento.image_back %>" alt="Figura Funko coleccionable de Pidgeotto perteneciente a la serie Pokemon en caja">
+            </picture>
+              <div class="card-item-content">
+                  <p class="card-item-licence"><%= elemento.licence_name.toUpperCase() %></p>
+                  <h4 class="card-item-name"><%= elemento.product_name.toUpperCase() %></h4>
+                  <p class="card-item-price">$<%= elemento.price %></p>
+                  <p class="card-item-promo"><%= elemento.dues %> CUOTAS SIN INTERÉS</p>
+              </div>
+          </a>
+        </div>
+    <% }) %>
+    <!-- Hasta acá llega la "vitrina" de muñecos -->  
+        
+    <section class="flex-btn"> <!--No puedo centrar n° ni centrarlos en pag. Ni hacer border radius-->
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left page" data-glide-dir="<"><iconify-icon class="iconify_carrousel" icon="mdi:chevron-left"></iconify-icon></button>
+      </div>
+      <div class="page"><a href="/pages/shop/shop.html">1</a></div>
+      <div class="page"><a href="/pages/shop/shop.html">2</a></div>
+      <div class="page"><a href="/pages/shop/shop.html">...</a></div>
+      <div class="page"><a href="/pages/shop/shop.html">9</a></div>
+      <div class="page"><a href="/pages/shop/shop.html">10</a></div>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--right page" data-glide-dir=">"><iconify-icon class="iconify_carrousel" icon="mdi:chevron-right"></iconify-icon></button>
+      </div>
+    </section>
+  </div>
+</main>
+
+    <!--  ************* FOOTER ****************  -->
+    <%- include("../partials/footer") %>
+
+    <!--  ************* SCRIPTS ****************  -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="./js/glide.js"></script>
+  </body>
+</html>
