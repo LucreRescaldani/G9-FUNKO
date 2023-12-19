@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/create_Edit_contact.css">
-    <link rel="stylesheet" href="../../css/admin.css">
-    <link rel="stylesheet" href="../../css/Normalizacioncss.css">
+    <link rel="stylesheet" href="/css/create_Edit_contact.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="/css/Normalizacioncss.css">
 
     <title>Admin | Funkoshop</title>
 </head>
@@ -22,7 +22,7 @@
         <section class="admin-search">
         <div>
             <button class="search-button" type="button">
-                <img src="../../img/icons/search_icon.svg" alt="icono de lupa">
+                <img src="/img/icons/search_icon.svg" alt="icono de lupa">
             </button> 
         </div>
         <div>
@@ -36,10 +36,12 @@
             <div class="table_header">
                 <h1>LISTADO DE PRODUCTOS</h1>
                 <div class="admin-btn-plus">
-                <p>AGREGAR</p> <!--Falta centrar y negrita-->
-                <button type="button"> <!--Falta sacar border-->
-                    <img src="../../img/icons/plus_icon.svg" alt="icono de agregar">
-                </button>
+                    <p>AGREGAR</p> <!--Falta centrar y negrita-->
+                    <form action="/admin/create">
+                        <button type="submit" >
+                            <img src="/img/icons/plus_icon.svg" alt="icono de agregar">
+                        </button>
+                    </form>
                 </div>
             </div>
         </div> 
@@ -86,25 +88,6 @@
                     <% })  %>
 
                     <!-- ******** FIN ******** Inserción dinámica desde la BD ******** FIN ********   -->
- 
-                    <tr>
-                        <td>13</td>
-                        <td>HPT001004</td>
-                        <td>Snape Patronus</td>
-                        <td>HARRY POTTER</td>
-                        <td class="pencil_trash">
-                            <button type="submit">
-                                <a href="./edit.html">
-                                <img src="/img/icons/edit_pencil.svg">
-                                </a>
-                            </button>
-                            <form action="./admin.html">
-                                <button type="reset">
-                                    <img src="/img/icons/delete_trash.svg">
-                                </button>
-                            </form>
-                        </td>
-                    </tr>
                 </tbody>
             </table>
         </section>
