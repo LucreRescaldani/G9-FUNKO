@@ -1,4 +1,3 @@
-<<<<<<< HEAD:css/create_Edit_contact.css
 main {
     display: flex;
     flex-direction: column;
@@ -135,206 +134,135 @@ input [type="file"] {
     font-size: var(--font-medium);
     font-family: var(--base-font)
 }
-
-.edit-input {
-    color: var(--dark-solido);
-}
-
-.img_frente_edit{
-    margin-right: var(--spacing-16);
-}
-
-.img_edit{
-    width: 15rem;
-}
-
-.edit-modificar {
-background-color: var(--primario-solido);
-  color: var(--light-solid-font);
-  border: none;
-  display:inline;
-  padding: var(--spacing-8) var(--spacing-16);
-  font-size: var(--font-xsmall);
-  font-family: var(--primary-font);
-  transition: background .3s ease-in-out;
-  position: relative;
-  margin-bottom: 40px;
-  width: 175px;
-  height: 44.33px;
-  font-weight: bold;
-  margin-right: 20px;
-}
-
-.edit-modificar:hover{
-    background-color: var(--primario-900);
-  }
-
-/*css contacto*/
-.contacto{
-    margin:  var(--spacing-36)var(--spacing-68);
-}
-.titulo-contacto{
-    margin: var(--spacing-12) 0;
-    color: var(--dark-solido);
-    font-family: var(--second-font);
-    font-size: var(--font-xlarge);
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 1.68px;
-}
-.lista-contacto{
-    color: var(--dark-solido);
-    font-family: var(--second-font);
-    font-size: var(--font-large);
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 1.68px;
-}
-.lista-contacto li{
-    margin: var(--spacing-36);
-}
-.logo-whats{
-    width: 2%;
-=======
-main {
+.nav-edit{
     display: flex;
-    flex-direction: column;
-    margin-top: 36px;
-
-}
-
-form {
-    width: 82%;
-    align-items: left;
-    margin-left: 0;
-}
-
-h1 {
-    font-size: 42px;
-    font-family: var(--second-font);
-    font-weight: 700;
-}
-
-textarea {
-    margin-top: 35px;
-    width: 82%;
-    height: 195px;
-    font-size: var(--font-medium);
-    font-family: var(--base-font);
-    font-weight: 400;
-    border-radius: 4px;
-}
-
-.main-title {
-    font-size: var(--font-jumbo);
-    font-family: var(--second-font);
-    font-weight: 700;
-    margin-top: 36px;
-}
-
-.main-article {
-    margin-top: 43px;
     justify-content: space-between;
 }
+.items-nav-edit{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--second-font);
+    font-size: var(--font-xsmall);
+    color: var(--light-solid-font);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.cuerpo-edit{
+    margin:  var(--spacing-36)var(--spacing-68);
+    
 
-.main-article label {
-    flex: 1;
-    text-align: left;
-    font-family: var(--base-font);
-    font-weight: 400;
-    font-size: var(--font-large);
+}
+.titulo-edit{
+    margin: var(--spacing-12) 0;
     color: var(--dark-solido);
-    gap: var(--spacing-12);
+    font-family: var(--second-font);
+    font-size: var(--font-xlarge);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.68px;
 }
-
-input[type="text"],
-input[type="number"] {
-    flex: 2;
-    border: none;
-    border-bottom: 2px solid var(--primario-solido);
-    padding: 2px;
-    font-size: var(--font-medium);
+.primer-linea-edit{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin: var(--spacing-36) 0
+}
+.categoria-edit, .licencia-edit{
+    color: var(--dark-solido);
     font-family: var(--base-font);
-    font-weight: 400;
-    gap: var(--spacing-12);
-    margin-left: 10px;
-    margin-right: 50px;
+    font-size: var(--font-small);
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.96px;
 }
-
-input[type="submit"],
-input[type="button"]{
-    background-color: var(--primario-solido);
-    color: white;
-    border: none;
-    padding: 10px 20px;
+#categoria, #licencia, #cuotas{
+    border: var(--dark-solido) 1px solid;
+    border-radius: 7%;
+    width: 15rem;
+    margin-left: var(--spacing-8);
+    color: var(--dark-solido);
+    font-family: var(--base-font);
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.nombre_producto_edit{
+    color: var(--dark-solido);
+    font-family: var(--base-font);
+    font-size: var(--font-small);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.96px;
+    margin-bottom: var(--spacing-20);
+}
+#nombre_prod{
+    color: var(--dark-solido);
+    font-family: var(--base-font);
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: var(--primario-900) 2px solid underline;
+    }
+#descripcion{
+    width: 63rem;
+    height: 12.17rem;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid var(--dark-solido);
+    color: var(--dark-solido);
+    font-family: var(--base-font);
     font-size: var(--font-xsmall);
-    cursor: pointer;
-    margin-bottom: 36px;
-    width: 175px;
-    height: 44px;
-
-}
-
-.main-article .form-label {
-    font-size: var(--font-large);
-    font-family: var(--base-font);
+    font-style: normal;
     font-weight: 400;
-    margin-top: 43px;
-}
-
-.form-label {
-    font-size: var(--font-large);
-    font-family: var(--base-font);
-    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.96px;
     text-align: left;
-    margin-top: 59px;
+    margin-bottom: var(--spacing-12);
 }
-
-input [type="file"] {
-    font-family: Arial, Helvetica, sans-serif;
+.sku_precio_stock_edit{
+    margin-bottom: var(--spacing-36);    
+    display: flex;
+    gap: 0.8rem;
+    
+}
+.sku-edit{
+    color: var(--dark-solido);
+    font-family: var(--base-font);
+    font-size: var(--font-small);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.96px;
+}
+.sku_value_edit{
+    width: 15rem;
+    color: var(--dark-solido);
+    font-family: var(--base-font);
     font-size: var(--font-xsmall);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    text-decoration: var(--primario-900) 2px solid underline;
 }
-
-#licencia,
-#categoria {
-    border-radius: 4px;
-    padding: 2px;
-    width: 243px;
-    height: 44px;
-    margin-left: 10px;
-    margin-right: 25px;
+#cuotas{
+    width: 21.6rem;
 }
-
-#cuotas {
-    border-radius: 4px;
-    padding: 2px;
-    width: 296px;
-    height: 44px;
+.descuento_edit{
+    margin-bottom: var(--spacing-36);
 }
-
-#sku,
-#precio {
-    width: 130px;
+.elegir_edit{
+    font-size: 1.1em;
 }
-
-#stock,
-#descuento {
-    width: 55px;
+.elegir_img_edit{
+    margin-bottom: var(--spacing-16);
 }
-
-#nombre {
-    width: 296px;
-    height: 22px;
-}
-
-
-.create-input {
-    font-size: var(--font-medium);
-    font-family: var(--base-font)
-}
-
 .edit-input {
     color: var(--dark-solido);
 }
@@ -346,7 +274,50 @@ input [type="file"] {
 .img_edit{
     width: 15rem;
 }
+.input_mod_edit{
+    margin-top: 5rem;
+    background-color: var(--primario-900);
+    width: 17rem;
+    padding: var(--spacing-12) var(--spacing-20);
+    color: var(--light-solid-font);
+    font-family: var(--base-font);
+    font-size: var(--font-xsmall);
+    font-weight: 600;
+    transition: all 0.5 ease-in-out;
+}
+.input_mod_edit:hover{
+    background-color: var(--dark-bg-solid);
+    color: var(--primario-900);
 
+}
+.footer_edit{
+    height: 343px;
+}
+.footer_nav_edit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer_li_edit{
+    color: var(--light-solid-font);
+    font-family: var(--second-font);
+    font-size: var(--font-xsmall);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 1.25rem 0;
+    
+}
+.footer_p_edit{
+    font-size: var(--font-xsmall);
+}
+.link_edit{
+    padding: var(--spacing-8) var(--spacing-16);
+    transition: background 0.5 ease-in-out;
+}
+.link_edit:hover{
+    background-color: var(--primario-900);
+}
 .edit-modificar {
 background-color: var(--primario-solido);
   color: var(--light-solid-font);
@@ -396,5 +367,4 @@ background-color: var(--primario-solido);
 }
 .logo-whats{
     width: 2%;
->>>>>>> development:public/css/create_Edit_contact.css
 }
