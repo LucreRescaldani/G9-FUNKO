@@ -374,7 +374,22 @@ navbar-link iconify-icon{
   color:var(--secundario-solido);
   font-family: var(--primary-font);
 }
-
+.item-cantidad{
+  color: var(--light-solid-font);
+  background-color: #4F4F4F;
+  border: none;
+  width: 18px;
+  height: 16px;
+}
+.item-input{
+  font-size: var(--font-small);
+  color: #747474;
+  border-color: #C9C9C9;
+  border-width: thin;
+  width: 105.47px;
+  height: 35.24px;
+  text-align: center;
+}
 .item-btn{
   display:inline;
   padding: var(--spacing-8) var(--spacing-8);
@@ -395,7 +410,11 @@ navbar-link iconify-icon{
   transition: background .3s ease-in-out;
   position: relative;
 }
-
+.item-btns {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.3rem;
+}
 .item-btn-carrito:hover{
   background-color: var(--primario-900);
 }
@@ -426,23 +445,6 @@ navbar-link iconify-icon{
 
 */
 
-<<<<<<< HEAD:css/Normalizacioncss.css
-iconify-icon {
-  color: var(--light-bg-solid);
-  font-size: var(--font-small);
-  font-weight: 700;
-}
-
-/*
-.glide__arrow--left {
-  left: 0;
-}
-
-.glide__arrow--left {
-  right: 0;
-}
-*/
-=======
  iconify-icon{
     color: var(--light-bg-solid);
     font-size: var(--font-small);
@@ -458,7 +460,6 @@ iconify-icon {
     right: 0;
     color: var(--dark-bg-solid);
   }
->>>>>>> development:public/css/Normalizacioncss.css
 
 /************** FIN SLIDER ****************/
 
@@ -515,9 +516,12 @@ iconify-icon {
 }
 
 .card-item-promo{
+  display: flex;
   font-size: var(--font-xsmall);
   color: var(--secundario-solido);
   font-weight: 700;
+  gap: 1rem;
+  align-items: center;
 }
 .iconify_carrousel{
   color: var(--dark-bg-solid);
