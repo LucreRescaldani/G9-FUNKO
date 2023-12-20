@@ -134,6 +134,9 @@ input [type="file"] {
     font-size: var(--font-medium);
     font-family: var(--base-font)
 }
+.create{
+    margin-left: 20%;
+}
 .nav-edit{
     display: flex;
     justify-content: space-between;

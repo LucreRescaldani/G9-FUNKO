@@ -15,8 +15,9 @@
 
   <!--  ************** MAIN *****************  -->
   <main class="container">
+    <section class="principal">
     <!--Filtros-->
-    <section>
+    <section class="left-shop">
 
         <section class="filtro">
         <p>BUSCAR</p>
@@ -93,21 +94,27 @@
         </div>
     <% }) %>
     <!-- Hasta acá llega la "vitrina" de muñecos -->  
-        
-    <section class="flex-btn"> <!--No puedo centrar n° ni centrarlos en pag. Ni hacer border radius-->
+    </div>  
+  </section> 
+   
+    <div>
       <div class="glide__arrows" data-glide-el="controls">
-        <button class="glide__arrow glide__arrow--left page" data-glide-dir="<"><iconify-icon class="iconify_carrousel" icon="mdi:chevron-left"></iconify-icon></button>
+        <button class="page glide__arrow glide__arrow--left " data-glide-dir="<"><iconify-icon class="iconify_carrousel" icon="mdi:chevron-left"></iconify-icon></button>
       </div>
-      <div class="page"><a href="/shop/#">1</a></div>
-      <div class="page"><a href="/shop">2</a></div>
-      <div class="page"><a href="/shop">...</a></div>
-      <div class="page"><a href="/shop">9</a></div>
-      <div class="page"><a href="/shop">10</a></div>
-      <div class="glide__arrows" data-glide-el="controls">
-        <button class="glide__arrow glide__arrow--right page" data-glide-dir=">"><iconify-icon class="iconify_carrousel" icon="mdi:chevron-right"></iconify-icon></button>
-      </div>
+       <section class="flex-btn pagination"> <!--No puedo centrar n° ni centrarlos en pag. Ni hacer border radius-->
+      
+      <div ><a class="page page-selected" href="/shop/#">1</a></div>
+      <div><a class="page" href="/shop">2</a></div>
+      <div><a class="page" href="/shop">...</a></div>
+      <div><a class="page" href="/shop">9</a></div>
+      <div><a class="page" href="/shop">10</a></div>
+      
     </section>
-  </div>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="page glide__arrow glide__arrow--right " data-glide-dir=">"><iconify-icon class="iconify_carrousel" icon="mdi:chevron-right"></iconify-icon></button>
+      </div>
+    </div>
+  
 </main>
 
     <!--  ************* FOOTER ****************  -->

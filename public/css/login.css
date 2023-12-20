@@ -2,17 +2,19 @@
 main {
     display: flex;
     flex-direction: column;
+    
 }
 
 form {
-    max-width: 25em;
+    max-width: 60em;
     width: 100%;
     text-align: center;
     margin: 0 auto;
 }
 
 .main-section {
-    text-align: center;
+    margin: 10em 0;
+    gap: 10em;
     width: auto;
     align-items: center;
     text-align: center;
@@ -21,7 +23,7 @@ form {
 .main-title {
     font-family: var(--second-font);
     font-size: 2.6em;
-    margin-top: 2.2em;
+    margin: 2em;
     font-weight: 700;
 }
 
@@ -29,7 +31,7 @@ form {
 .main-article {
     display: flex;
     justify-content: space-between;
-    margin-top: 1.7em;
+    margin: 3em;
     align-items: center;
 }
 
