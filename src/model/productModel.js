@@ -38,13 +38,14 @@ const editItemInDB = async (itemId, itemData) => {
     // console.log('Editando item en BD');
     // console.log('Item ' + itemId);
     // console.log('Item ' + JSON.stringify(itemData));
+    // console.log('El precio es ' + (itemData.precio).slice(1));
     try {
         const camposConData = {
             product_name: itemData.nombre,
             product_description: itemData.descripcion,
-            price: itemData.precio,
+            price: (itemData.precio).slice(1),
             stock: itemData.stock,
-            discount: itemData.descuento,
+            discount: (itemData.descuento).substring(1, (itemData.descuento).length -1),
             sku: itemData.sku
         }
         // dues: itemData.cuotas,
@@ -61,7 +62,7 @@ const editItemInDB = async (itemId, itemData) => {
     }
 };
 
-const addItemInDB = async (itemId, itemData) => {
+const addItemToDB = async (itemData) => {
     // console.log('Editando item en BD');
     // console.log('Item ' + itemId);
     // console.log('Item ' + JSON.stringify(itemData));
@@ -69,15 +70,19 @@ const addItemInDB = async (itemId, itemData) => {
         const camposConData = {
             product_name: itemData.nombre,
             product_description: itemData.descripcion,
-            price: itemData.precio,
+            price: (itemData.precio).slice(1),
             stock: itemData.stock,
-            discount: itemData.descuento,
-            sku: itemData.sku
+            discount: (itemData.descuento).split("%").at(0),
+            sku: itemData.sku,
+            dues: itemData.cuotas,
+            licence_id: 1,
+            category_id: 1
         }
         // dues: itemData.cuotas,
         // image_front: itemData.,
         // image_back: itemData.
-        await dbConn.dbConnectionPool.query('INSERT INTO product SET ? WHERE product_id = ?', [camposConData, itemId]);
+        console.log("Lo que intento agregar a la BD: " + JSON.stringify(camposConData));
+        await dbConn.dbConnectionPool.query('INSERT INTO product SET ?', [camposConData]);
         // const itemDevuelto = await getOne(itemId); 
         // console.log('Item actualizado' + JSON.stringify(itemDevuelto));         
         // return itemDevuelto;
@@ -93,5 +98,5 @@ module.exports = {
     getOne,
     deleteByID,
     editItemInDB,
-    addItemInDB
+    addItemToDB
 }

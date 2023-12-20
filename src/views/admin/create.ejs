@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/create_Edit_contact.css">
-    <link rel="stylesheet" href="../../css/Normalizacioncss.css">
+    <link rel="stylesheet" href="/css/create_Edit_contact.css">
+    <link rel="stylesheet" href="/css/Normalizacioncss.css">
 
     <title>Create | Funkoshop</title>
 </head>
@@ -24,17 +24,17 @@
                 <label for="categoria">Categoría:</label>
                 <select class="create-input" id="categoria" name="categoria">
                     <option value="" disabled selected>Seleccionar</option>
-                    <option value="opcion1">Opción 1</option>
-                    <option value="opcion2">Opción 2</option>
-                    <option value="opcion3">Opción 3</option>
+                    <option value="Funkos">Funkos</option>
+                    <option value="Remeras">Remeras</option>
+                    <option value="Llaveros">Llaveros</option>
                 </select>
             
                 <label for="licencia">Licencia:</label>
                 <select class="create-input" id="licencia" name="licencia" img src="/img/material-symbols_arrow-drop-down-rounded.svg" alt="">
                     <option value="" disabled selected>Seleccionar</option>
-                    <option value="opcion1">Opción 1</option>
-                    <option value="opcion2">Opción 2</option>
-                    <option value="opcion3">Opción 3</option>
+                    <option value="Pokemon">Pokemon</option>
+                    <option value="Star Wars">Star Wars</option>
+                    <option value="Harry Potter">Harry Potter</option>
                 </select>
             </article>
 
@@ -62,16 +62,18 @@
                 
                 <label for="cuotas">Cuotas:</label>
                 <select class="create-input" id="cuotas" name="cuotas">
-                    <option value="" disabled selected>3 cuotas sin interés</option>
-                    <option value="opcion1">Opción 1</option>
-                    <option value="opcion2">Opción 2</option>
-                    <option value="opcion3">Opción 3</option>
+                    <option value="1" disabled selected>3 cuotas sin interés</option>
+                    <option value="6">6 cuotas sin interés</option>
+                    <option value="9">9 cuotas sin interés</option>
+                    <option value="12">12 cuotas sin interés</option>
                 </select>
             </article>
             
             <article class="main-article">
                 <label class="form-label">Imágenes:</label>
                 <input type="file" id="imagenes" name="imagenes" multiple>
+                <input type="hidden" id="imagen_front" name="image_front" multiple> <!-- PROBANDO -->
+                <input type="hidden" id="imagen_back" name="image_back" multiple> <!-- PROBANDO -->
              </article>
             
             

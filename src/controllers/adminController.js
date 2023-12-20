@@ -8,10 +8,10 @@ const adminControllers = {
     admin_create_get : (req, res) => res.render('admin/create',{}),
     admin_create_post : async (req, res) => {
         const newProductData = req.body;
-        console.log(newProductData);
+        console.log("Estoy por agregar el siguiente a la BD: " + JSON.stringify(newProductData));
         try {
-            // const nuevoProducto = await addProductToDB(nuevoProducto);
-            // console.log("Nuevo producto", nuevoProducto);
+            await productModel.addItemToDB(newProductData);
+            console.log("Nuevo producto agregado...supuestamente");
             res.redirect("/admin" + "?mensaje=Usuario agregado");
         } catch (err) {
             console.error('Error al agregar producto: ', err);
