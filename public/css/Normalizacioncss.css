@@ -120,12 +120,9 @@ input[type=number]::-webkit-outer-spin-button {
 
 header {
   background-color: var(--dark-bg-solid);
-  padding: var(--spacing-16);
+  padding: var(--spacing-36);
   width: 100%;
-  height: 13em;
-  align-items: center;
-
-  
+  align-items: center;  
 }
 
 .navbar{
@@ -328,7 +325,6 @@ navbar-link iconify-icon{
 /*****************  FIN MAIN DE INDEX.HTML  *****************/
 
 
-
 /***************  INICIO DE ULTIMOS LANZAMIENTOS  ****************/
 
 
@@ -528,6 +524,35 @@ navbar-link iconify-icon{
 }
 .iconify_carrousel{
   color: var(--dark-bg-solid);
+}
+
+/*Paginado*/
+.pagination{
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-12);
+}
+.pagination .pagination__link{
+  display: block;
+  font-size: var(--font-medium);
+  font-weight: 700;
+  border-radius: 4px;
+  padding: var(--spacing-12) var(--spacing-16);
+  margin-bottom: 5px;
+  border: 2px solid var(--dark-300);
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.pagination .pagination__link:first-of-type, .pagination .pagination__link:last-of-type {
+  color: var(--dark-500)
+}
+.pagination .pagination__link:hover{
+  background-color: var(--primario-900);
+  color: var(--light-bg-solid);
+  border-color: var(--primario-500);
+}
+.pagination .pagination__link--selected{
+  border-color: var(--primario-solido);
+  color: var(--primario-solido);
 }
  /*Animation*/
 @keyframes fade {
