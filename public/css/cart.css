@@ -1,60 +1,60 @@
 .container-cart{
-    margin-top: 100px;
-    margin-left: 110px;
+    margin-top: 6.25em;
+    margin-left: 6.9em;
 
 }
 
 .titulo-carrito{
     font-size: var(--font-xlarge);
-    padding-bottom: 10px;
-    border-bottom: 5px solid var(--primario-solido);
-    width: 350px;
+    padding-bottom: 0.6em;
+    border-bottom: 0.3em solid var(--primario-solido);
+    width: 22em;
 }
 
 .cart-container{
-    margin-top: 70px;
+    margin-top: 4.3em;
 }
 
 .cart-head{
     display: flex;
     font-size: var(--font-xsmall);
     background-color: var(--light-bg-solid);
-    width: 1100px;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px 2px var(--dark-300);
+    width: 69em;
+    padding: 0.6em;
+    border-radius: 0.6em;
+    box-shadow: 0px 0px 0.93em 0.12em var(--dark-300);
     margin-bottom: 30px; 
 }
 
 .item-cart-head1{
-    padding-left: 70px;
+    padding-left: 4.4em;
 }
 
 .item-cart-head2{
-    padding-left: 270px;
+    padding-left: 16.9em;
 }
 
 .item-cart-head3{
-    padding-left: 250px;
+    padding-left: 15.5em;
 }
 
 .logo-prod{
-    width: 120px;
-    padding-top:15px;
+    width: 7.5em;
+    padding-top:1em;
 }
 
 .text-cart{
-    margin: 30px 15px 20px;
+    margin: 1.9em 1em 1.25em;
 }
 
 .text-cart > h1{
     font-size: var(--font-small);
-    padding-bottom: 5px
+    padding-bottom: 0.3em
 }
 
 .text-cart > p{
     font-size: var(--font-xxsmall);
-    padding-bottom: 20px;
+    padding-bottom: 1.25em;
 }
 
 .cart-cantidad{
@@ -64,7 +64,7 @@
     font-weight: 300;
     gap: 1rem;
     align-items: center;
-    margin-left: 90px;
+    margin-left: 5.6em;
   }
 
 .cart-input{
@@ -73,26 +73,26 @@
     color: var(--dark-solido);
     border: 1px solid #C9C9C9;
     border-width: thin;
-    width: 89.48px;
-    height: 40px;
+    width: 5.6em;
+    height: 2.5em;
     text-align: center;
-    margin-top: 55px;
-    margin-left: 30px;
+    margin-top: 3.5em;
+    margin-left: 1.9em;
 }
 
 .cart-btns{
     display: flex;
     flex-direction: column-reverse;
     gap: 0.3rem;
-    margin-top: 50px;
+    margin-top: 3.1em;
 }
 
 .cart-mm{
     color: var(--light-solid-font);
     background-color: var(--primario-900);
     border: none;
-    width: 18px;
-    height: 16px;
+    width: 1.1em;
+    height: 1em;
 }
 
 .cart-cantidad2{
@@ -102,45 +102,45 @@
     font-weight: 300;
     gap: 1rem;
     align-items: center;
-    margin-left: 210px;
+    margin-left: 13.1em;
   }
 
 .price-cart{
-    margin-top: 55px;
-    margin-left: 170px;
+    margin-top: 3.4em;
+    margin-left: 10.6em;
 }
 
 .eliminar-cart{
-    margin-top: 55px;
-    width: 28px;
-    margin-left: 110px;
+    margin-top: 3.4em;
+    width: 1.75em;
+    margin-left: 6.8em;
 }
 
 .resumen-cart{
     display: flex;
     flex-direction: column;
     align-items: end;
-    margin-right: 140px;
-    margin-top: 50px;
+    margin-right: 8.75em;
+    margin-top: 3.1em;
 }
 
 .titulo-resumen{
         font-size: var(--font-xlarge);
-        padding-bottom: 10px;
-        border-bottom: 5px solid var(--primario-solido);
-        width: 150px;
+        padding-bottom: 0.6em;
+        border-bottom: 0.3em solid var(--primario-solido);
+        width: 9.3em;
 }
 
 .cart-articulos{
     display: flex;
-    margin-top: 50px;
+    margin-top: 3.1em;
     font-size: var(--font-xxsmall);
     background-color: var(--light-bg-solid);
-    width: 572px;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px 2px var(--dark-300);
-    margin-bottom: 50px; 
+    width: 35.8em;
+    padding: 1.9em;
+    border-radius: 0.6em;
+    box-shadow: 0px 0px 1em 0.15em var(--dark-300);
+    margin-bottom: 3.1em; 
 }
 
 .fila-articulos{
@@ -151,7 +151,7 @@
 }
 
 .fila-articulos>td{
-    margin-bottom: 15px;
+    margin-bottom: 1em;
     font-size: var(--font-xxsmall);
     font-family: var(--base-font);
     font-weight: 600;
@@ -159,10 +159,10 @@
 
 .total-cart{
     border-top: 2px solid var(--primario-solido);
-    padding-top: 5px;
+    padding-top: 0.6em;
     font-weight: 700;
     font-size: var(--font-xsmall);
-    width: 511px;
+    width: 32em;
 }
 
 .btn-pagar {
@@ -175,8 +175,8 @@
       font-family: var(--primary-font);
       transition: background .3s ease-in-out;
       position: relative;
-      margin-bottom: 100px;
-      width: 572px;
-      height: 44.33px;
+      margin-bottom: 6.25em;
+      width: 35.75em;
+      height: 2.8em;
       font-weight: 700;
     }

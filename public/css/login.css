@@ -5,7 +5,7 @@ main {
 }
 
 form {
-    max-width: 400px;
+    max-width: 25em;
     width: 100%;
     text-align: center;
     margin: 0 auto;
@@ -20,8 +20,8 @@ form {
 
 .main-title {
     font-family: var(--second-font);
-    font-size: 42px;
-    margin-top: 36px;
+    font-size: 2.6em;
+    margin-top: 2.2em;
     font-weight: 700;
 }
 
@@ -29,7 +29,7 @@ form {
 .main-article {
     display: flex;
     justify-content: space-between;
-    margin-top: 27.07px;
+    margin-top: 1.7em;
     align-items: center;
 }
 
@@ -37,7 +37,7 @@ form {
 .main-article label {
     flex: 1;
     text-align: left;
-    margin-right: 20px;
+    margin-right: 1.2em;
     font-family: var(--base-font);
     font-weight: 400;
     font-size: var(--font-large);
@@ -50,7 +50,7 @@ form {
     flex: 2;
     border: none;
     border-bottom: 2px solid red;
-    padding: 5px;
+    padding: 0.3em;
     width: 100%;
     font-size: var(--font-small);
     font-family: var(--base-font);
@@ -62,7 +62,7 @@ input[type="submit"] {
     background-color: var(--primario-solido);
     color: white;
     border: none;
-    padding: 10px 25px;
+    padding: 0.6em 1.5em;
     font-size: var(--font-xsmall);
     display: block;
     margin: 0 auto;
@@ -70,10 +70,10 @@ input[type="submit"] {
 }
 
 #remember {
-    margin-left: 41.23px;
+    margin-left: 2.6em;
     display: inline-block;
     width: auto;
-    margin-right: 10px;
+    margin-right: 0.6em;
     font-weight: 400;
     font-size: var(--font-xsmall);
 }
@@ -81,7 +81,7 @@ input[type="submit"] {
 .main-link {
     text-align: center;
     display: block;
-    margin: 22px 36px;
+    margin: 1.2em 2.2em;
     text-decoration: none;
     color: var(--secundario-solido);
     font-weight: 400;

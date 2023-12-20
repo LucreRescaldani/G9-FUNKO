@@ -1,9 +1,4 @@
-/*-----------------INICIO HEADER-----------------*/
-
-
-  
-  
-  .navbar-logo {
+ .navbar-logo {
     max-width: 18.75 em;
   }
   
@@ -237,7 +232,7 @@
     font-size: var(--font-xsmall);
     color: var(--secundario-solido);
     font-weight: 700;
-    gap: 1rem;
+    gap: 1em;
     align-items: center;
   }
   /*Animation*/

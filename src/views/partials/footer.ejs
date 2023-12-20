@@ -1,9 +1,28 @@
 <footer  class="footer">
     <nav class="container navbar " >
         <ul class="navbar-items">
+           <% if (locals.isLogged){%> 
             <li class="navbar-item">
+                
                 <a class="navbar-link" href="/shop">SHOP</a>
             </li>
+            <li class="navbar-item">
+                
+                <a class="navbar-link" href="/auth/logout">SALIR</a>
+            </li>
+            <li class="navbar-item">
+                <a class="navbar-link" href="/contact">CONTACTO</a>
+            </li>
+                <%} else
+                {%> <li class="navbar-item">
+                
+                    <a class="navbar-link" href="/shop">SHOP</a>
+                </li>
+                <li class="navbar-item">
+                
+                    <a class="navbar-link" href="/auth/login">INGRESAR</a>
+                </li>
+
             <li class="navbar-item">
                 <a class="navbar-link" href="/auth/register">REGISTRARSE</a>
             </li>
@@ -12,7 +31,8 @@
             </li>
             <li class="navbar-item">
                 <a class="navbar-link" href="/contact">CONTACTO</a>
-            </li>                    
+            </li>               
+            <%}%>     
         </ul>
         <picture>
             <!-- Anter era "./img/branding/isotype.svg" -->

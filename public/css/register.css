@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 36px;
+    gap: 2.2em;
 }
 
 .register-title {
@@ -43,21 +43,21 @@
     letter-spacing: 0.96px;
     align-items: center;
     place-content: space-between;
-    margin: 10px 0px 10px 0px;
-    padding: 10px;
+    margin: 0.6em 0px 0.6em 0px;
+    padding: 0.6em;
 }
     
 .register-form-item:nth-child(5) label{
-    padding-right: 10px;
+    padding-right: 0.6em;
 }
 .input-register{
     border-bottom: var(--primario-900) 2px solid;
-    width: 200px;
+    width: 12.5em;
     border-top: 0;
     border-left: 0;
     border-right: 0;
     font-family: var(--base-font);
-    font-size: 1.8rem;
+    font-size: 1.8em;
     color: var(--dark-solido);
 }
 
@@ -68,7 +68,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin: 10px;
+    margin: 0.6em;
     padding: var(--spacing-36);
 }
 .register-submit{
@@ -82,11 +82,11 @@
   font-family: var(--primary-font);
   transition: background .3s ease-in-out;
   position: relative;
-  margin-bottom: 40px;
-  width: 103px;
-  height: 39.06px;
+  margin-bottom: 2.5em;
+  width: 6.5em;
+  height: 2.5em;
   font-weight: 200;
-  margin-right: 20px;
+  margin-right: 1.2em;
   cursor: pointer;
 }
 
@@ -97,7 +97,7 @@
 .register-terminos-condiciones{
     color: var(--secundario-900);
     font-family: var(--base-font);
-    font-size: 16px;
+    font-size: 1em;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
