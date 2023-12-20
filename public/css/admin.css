@@ -1,39 +1,39 @@
 .admin-search {
     display: flex;
     gap: 1em;
-    margin-left: 70px;
-    margin-bottom: 30px;
+    margin-left: 4.3em;
+    margin-bottom: 1.9em;
 }
 
 .search-button{
-    width: 42px;
-    height: 42px;
+    width: 2.6em;
+    height: 2.6em;
 }
 
 button{
-    width: 34px;
-    height: 34px;
+    width: 2.12em;
+    height: 2.12em;
     border: none;
     background-color: var(--light-bg-solid);
     cursor: pointer;
 }
 
 .buscador{
-    height:44.28px;
-    width: 529.76px;
+    height:2.8em;
+    width: 33em;
     border-radius: 2px solid var(--dark-bg-solid);
 }
 
 ::placeholder {
-    padding-left: 20px;
+    padding-left: 1.2em;
     font-family: var(--base-font-);
     font-size: var(--font-xsmall);
     color: #B9B9B9;
 }
 
 .admin-container{
-    margin-left: 70px;
-    margin-right: 165px;
+    margin-left: 4.3em;
+    margin-right: 10em;
 }
 
 .table_header{
@@ -44,7 +44,7 @@ button{
 .admin-btn-plus{
     display: flex;
     align-self: flex-end;
-    gap: 30px;
+    gap: 1.8em;
 }
 
 .section-container{
@@ -53,8 +53,8 @@ button{
 }
 
 table {
-    margin-left: 70px;
-    margin-bottom: 40px;
+    margin-left: 4.3em;
+    margin-bottom: 2.5em;
     align-items: center;
     justify-content: space-between;
 }
@@ -67,5 +67,5 @@ th, td{
 
 .pencil_trash{
     display: flex;
-    gap: 50px;
+    gap: 3.1em;
 }

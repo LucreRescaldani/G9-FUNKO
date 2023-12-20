@@ -1,11 +1,7 @@
 /*-----------------INICIO HEADER-----------------*/
 
 
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  
   
   .navbar-logo {
     max-width: 18.75 em;
@@ -263,11 +259,7 @@
   
 
   /*-----------------MAIN SHOP-----------------*/
-  .container{
-    display:flex;
-    margin: 2.5em 5em;
-  }
-
+  
   .filtro{
     font-family: var(--baseline-font);
     font-weight: 500;
