@@ -4,6 +4,9 @@ const session = require('express-session');
 
 const app = express();
 
+app.use(express.urlencoded ({extended: false}));
+app.use(express.json());
+
 const mainRoutes = require('./src/routes/mainRoutes');
 const shopRoutes = require('./src/routes/shopRoutes');
 const adminRoutes = require('./src/routes/adminRoutes');
@@ -18,9 +21,6 @@ app.use(session({
         cookie: {maxAge: 60000 * 5}
     })
 );
-
-app.use(express.urlencoded ({extended: false}));
-app.use(express.json());
 
 app.set('views', './src/views');
 app.set('view engine', 'ejs');

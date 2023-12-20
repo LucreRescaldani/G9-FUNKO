@@ -6,12 +6,47 @@ const adminControllers = {
         res.render('admin/admin',{data});
     },
     admin_create_get : (req, res) => res.render('admin/create',{}),
-    admin_create_post : (req, res) => res.send("Ruta para Create x post"),
-    admin_edit_get : async (req, res) => {
-        const [data] = await productModel.getOne(req.params.id);
-        res.render('admin/edit',{data});
+    admin_create_post : async (req, res) => {
+        const newProductData = req.body;
+        console.log(newProductData);
+        try {
+            // const nuevoProducto = await addProductToDB(nuevoProducto);
+            // console.log("Nuevo producto", nuevoProducto);
+            res.redirect("/admin" + "?mensaje=Usuario agregado");
+        } catch (err) {
+            console.error('Error al agregar producto: ', err);
+            res.status(500).send('Internal Server Error.');
+        }
     },
-    admin_edit_put : (req, res) => res.send("Ruta para Edit x put"),
+    admin_edit_get : async (req, res) => {
+        try {
+            const [item] = await productModel.getOne(req.params.id);
+            if (item) {  // El producto con ese id existe.
+                res.render('admin/edit',{item});
+            } else {
+                res.send(404).send('Producto no encontrado.');
+            }
+        } catch(err) {
+            console.error('Error al agregar producto: ', err);
+            res.status(500).send('Internal Server Error.');
+        }
+    },
+    admin_edit_put : async (req, res) => {
+        // console.log('Estoy en el admin edit put ');
+        const itemData = req.body;
+        const itemId = req.params.id;
+        try {
+            const updatedItem = await productModel.editItemInDB(itemId, itemData);
+            if (updatedItem) {
+                res.redirect('/admin' + '?mensaje=Producto actualizado.');
+            } else {
+                res.status(404).send('Error editando item: item no encontrado.');
+            }
+        } catch(err) {
+            console.error('Error al editar item: ', err);
+            res.status(500).send('Internal Server Error.');
+        }
+    },
     admin_delete : async (req, res) => {
         await productModel.deleteByID(req.params.id);
         res.redirect('/admin');

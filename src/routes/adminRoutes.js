@@ -14,6 +14,23 @@ const requiereAdmin = (req, res, next) => {
 
 router.use(methodOverride('_method'));
 
+router.use(methodOverride(function (req, res) {
+    if (req.body && typeof req.body === 'object' && '_method' in req.body) {
+      // look in urlencoded POST bodies and delete it
+      var method = req.body._method
+      delete req.body._method
+      return method
+    }
+  }));
+
+// Pequeño middleware para inspeccionar el request method
+// de las request entrantes.
+//
+// router.use((req, res, next) => {
+//    console.log(req.method);
+//    next();
+// });
+
 router.get('/', requiereAdmin, adminControllers.admin_get);
 router.get('/create', requiereAdmin, adminControllers.admin_create_get);
 router.post('/create', requiereAdmin, adminControllers.admin_create_post);

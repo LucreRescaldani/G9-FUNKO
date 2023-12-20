@@ -34,8 +34,64 @@ const deleteByID = async (id) => {
     }
 }
 
+const editItemInDB = async (itemId, itemData) => {
+    // console.log('Editando item en BD');
+    // console.log('Item ' + itemId);
+    // console.log('Item ' + JSON.stringify(itemData));
+    try {
+        const camposConData = {
+            product_name: itemData.nombre,
+            product_description: itemData.descripcion,
+            price: itemData.precio,
+            stock: itemData.stock,
+            discount: itemData.descuento,
+            sku: itemData.sku
+        }
+        // dues: itemData.cuotas,
+        // image_front: itemData.,
+        // image_back: itemData.
+        await dbConn.dbConnectionPool.query('UPDATE product SET ? WHERE product_id = ?', [camposConData, itemId]);
+        const itemDevuelto = await getOne(itemId); 
+        // console.log('Item actualizado' + JSON.stringify(itemDevuelto));         
+        return itemDevuelto;
+    } catch (error) {
+        console.log('Error de BD' + error);
+    } finally {
+        dbConn.dbConnectionPool.releaseConnection();
+    }
+};
+
+const addItemInDB = async (itemId, itemData) => {
+    // console.log('Editando item en BD');
+    // console.log('Item ' + itemId);
+    // console.log('Item ' + JSON.stringify(itemData));
+    try {
+        const camposConData = {
+            product_name: itemData.nombre,
+            product_description: itemData.descripcion,
+            price: itemData.precio,
+            stock: itemData.stock,
+            discount: itemData.descuento,
+            sku: itemData.sku
+        }
+        // dues: itemData.cuotas,
+        // image_front: itemData.,
+        // image_back: itemData.
+        await dbConn.dbConnectionPool.query('INSERT INTO product SET ? WHERE product_id = ?', [camposConData, itemId]);
+        // const itemDevuelto = await getOne(itemId); 
+        // console.log('Item actualizado' + JSON.stringify(itemDevuelto));         
+        // return itemDevuelto;
+    } catch (error) {
+        console.log('Error de BD' + error);
+    } finally {
+        dbConn.dbConnectionPool.releaseConnection();
+    }
+};
+
 module.exports = {
     getAll,
     getOne,
-    deleteByID
+    deleteByID,
+    editItemInDB,
+    addItemInDB
 }
