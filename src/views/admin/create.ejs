@@ -18,7 +18,8 @@
   <!--  ************** MAIN *****************  -->
 
     <main class="container create container-b"> 
-        <form class="container" action="/admin/create" method="POST">
+        <form class="container" action="/admin/create" method="POST" enctype="multipart/form-data">
+            <!-- enctype="multipart/form-data" -->
             <h1 class="main-article">CREAR NUEVO ITEM</h1>
             <article class="main-article">
                 <label for="categoria">Categoría:</label>
@@ -71,9 +72,9 @@
             
             <article class="main-article">
                 <label class="form-label">Imágenes:</label>
-                <input type="file" id="imagenes" name="imagenes" multiple>
-                <input type="hidden" id="imagen_front" name="image_front" multiple> <!-- PROBANDO -->
-                <input type="hidden" id="imagen_back" name="image_back" multiple> <!-- PROBANDO -->
+                <input type="file" id="imagenes" name="imagenes" > <!-- multiple -->
+                <!-- <input type="hidden" id="imagen_front" name="image_front">  PROBANDO -->
+                <!-- <input type="hidden" id="imagen_back" name="image_back">  PROBANDO -->
              </article>
             
             
